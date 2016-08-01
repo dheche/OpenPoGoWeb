@@ -875,7 +875,6 @@ var mapView = {
               fortTeam = '',
               fortType = 'PokeStop',
               pokemonGuard = '';
-<<<<<<< HEAD
             var members = '<b>Level</b>: ' + self.getGymLevel(fort.gym_points || 0);
             if ('gym_details' in fort) {
                 if ('gym_state' in fort.gym_details) {
@@ -895,14 +894,6 @@ var mapView = {
                         }
                     }
                 }
-=======
-            if (fort.guard_pokemon_id != undefined) {
-              var id = self.createID();
-              fortPoints = 'Points: ' + fort.gym_points + '<br><center><a class="waves-effect waves-light btn" style="margin-bottom:4%;" id="gymInfo-' + id + '">More Info</a></center>';
-              fortTeam = 'Team: ' + self.teams[fort.owned_by_team] + '<br>';
-              fortType = 'Gym';
-              pokemonGuard = 'Guard Pokemon: ' + (self.pokemonArray[fort.guard_pokemon_id - 1].Name || "None") + '<br>' + 'Level: ' + self.getGymLevel(fort.gym_points || 0) + '<br>';
->>>>>>> c4e6e2b07c3c83ec489bacf8869a775f6a7f921b
             }
             var contentString = '<b>Id</b>: ' + fort.id + '<br><b>Type</b>: ' + fortType + '<br>' + members + fortPoints + fortTeam;
             self.info_windows[fort.id] = new google.maps.InfoWindow({
